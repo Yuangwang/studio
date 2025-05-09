@@ -1,5 +1,7 @@
+
 'use client';
 
+import React from 'react'; // Explicitly import React
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PlusCircle, ListChecks } from 'lucide-react';
@@ -7,7 +9,7 @@ import useLocalStorage from '@/hooks/useLocalStorage';
 import type { Questionnaire } from '@/lib/types';
 import QuestionnaireListItem from '@/components/QuestionnaireListItem';
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card'; // Added import
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
   const [questionnaires] = useLocalStorage<Questionnaire[]>('questionnaires', []);
